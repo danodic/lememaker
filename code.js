@@ -119,7 +119,13 @@ $('#file-input').on('change', function (e) {
 $('#print').on('click', function () {
     // https://stackoverflow.com/questions/26584682/print-page-using-html2canvas
     const meme = document.getElementById('meme');
-    html2canvas(meme).then(function (canvas) {
+    html2canvas(meme, {
+        backgroundColor: '#000000',
+        x: 10, // why?!
+        y: 175, // also, why?!?!
+        windowWidth: 1000,
+        windowHeight: 200,
+    }).then(function (canvas) {
         var nWindow = window.open('');
         nWindow.document.body.appendChild(canvas);
         nWindow.focus();
