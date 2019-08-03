@@ -106,10 +106,13 @@ var update_first_name = function () {
 
 $("#bullshit").keypress(update_quote);
 $("#bullshit").change(update_quote);
+$("#bullshit").keyup(update_quote);
 $("#herp").keypress(update_last_name);
 $("#herp").change(update_last_name);
+$("#herp").keyup(update_last_name);
 $("#derp").keypress(update_first_name);
 $("#derp").change(update_first_name);
+$("#derp").keyup(update_first_name);
 
 document.getElementById("file-input").onchange = function (e) {
     loadImage(
