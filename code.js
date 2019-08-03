@@ -114,6 +114,8 @@ $("#derp").keypress(update_first_name);
 $("#derp").change(update_first_name);
 $("#derp").keyup(update_first_name);
 
+$("#picture-size").mousemove(handlePictureResize).change(handlePictureResize);
+
 document.getElementById("file-input").onchange = function (e) {
     loadImage(
         e.target.files[0],
@@ -144,3 +146,7 @@ $("#print").click(function () {
         location.reload();
     });
 });
+
+function handlePictureResize(event){
+    $("#picture-container").css("background-size", event.target.value + "%");
+}
