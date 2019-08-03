@@ -49,6 +49,7 @@ body {
 .picture-container {
   background-image: url("./derp.jpg");
   background-repeat: no-repeat;
+  background-size: contain;
   min-width: 200px;
   cursor: move;
   display: table-cell;
