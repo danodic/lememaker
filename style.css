@@ -24,9 +24,29 @@ body {
   background-color: black;
   width: 1000px;
   height: 200px;
+  margin: 0 auto;
+  display: table;
+}
+
+.meme-row {
+  display: table-row;
+}
+
+.picture-container {
+  background-image: url("./derp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  cursor: move;
+  display: table-cell;
+}
+
+.quote-container {
   margin-left: auto;
   margin-right: auto;
-  display: table;
+  padding: 20px;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .quote {
@@ -46,21 +66,18 @@ body {
   height: 1em;
 }
 
-.picture-container {
-  background-image: url("./derp.jpg");
-  background-repeat: no-repeat;
-  min-width: 200px;
-  cursor: move;
-  display: table-cell;
-}
-
-.quote-container {
+.field-container {
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  padding: 20px;
-  display: table-cell;
-  vertical-align: middle;
+}
+
+.bullshit-subtitle {
+  color: white;
+  font-family: "Noto Sans SC", sans-serif;
+  text-align: left;
+  font-size: 24px;
+  margin-top: 25px;
 }
 
 .text-field {
@@ -82,18 +99,26 @@ body {
   resize: none;
 }
 
-.bullshit-subtitle {
-  color: white;
-  font-family: "Noto Sans SC", sans-serif;
-  text-align: left;
-  font-size: 24px;
-  margin-top: 25px;
-}
-
-.field-container {
-  width: 800px;
+.file-selector-section {
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-color: white;
+  border-width: 0px 0px 0px 5px;
+  color: white;
+  font-size: 24px;
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+.file-selector {
+  font-size: 20px;
+  color: white;
+  border-color: white;
+  border-width: 0px 0px 0px 5px;
+  font-family: "Noto Sans SC", sans-serif;
+  padding: 10px;
+  width: 400px;
 }
 
 .button {
@@ -103,6 +128,7 @@ body {
   margin-top: 50px;
   font-size: 25px;
   font-family: "Noto Sans SC", sans-serif;
+  cursor: pointer;
 }
 
 .picture-overlay {
@@ -118,38 +144,11 @@ body {
   display: none;
 }
 
-.file-selector {
-  font-size: 20px;
-  color: white;
-  border-color: white;
-  border-width: 0px 0px 0px 5px;
-  font-family: "Noto Sans SC", sans-serif;
-  padding: 10px;
-  width: 400px;
-}
-
-.meme-row {
-  display: table-row;
-}
-
-.file-selector-section {
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(0, 0, 0, 0.5);
-  border-color: white;
-  border-width: 0px 0px 0px 5px;
-  color: white;
-  font-size: 24px;
-  font-family: "Noto Sans SC", sans-serif;
-}
-
 .credits {
   font-family: "Cardo", serif;
   font-size: 14px;
   color: white;
 }
-
 
 /* Slider https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 .slidecontainer {
