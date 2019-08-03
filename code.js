@@ -95,6 +95,7 @@ var update_first_name = function () {
 $('#bullshit').on('input change', update_quote);
 $('#herp').on('input change', update_last_name);
 $('#derp').on('input change', update_first_name);
+$("#picture-size").on('mousemove change', handlePictureResize);
 
 $('#file-input').on('change', function (e) {
     loadImage(
@@ -133,3 +134,7 @@ $('#print').on('click', function () {
         location.reload();
     });
 });
+
+function handlePictureResize(event){
+    $("#picture-container").css("background-size", event.target.value + "%");
+}
