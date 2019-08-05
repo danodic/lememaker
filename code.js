@@ -97,6 +97,13 @@ $('#herp').on('input change', update_last_name);
 $('#derp').on('input change', update_first_name);
 $("#picture-size").on('mousemove change', handlePictureResize);
 
+$('#picture-container').on('mousedown', function() {
+    $(this).css('cursor', 'grabbing');
+});
+$('#picture-container').on('mouseup', function() {
+    $(this).css('cursor', 'grab');
+});
+
 $('#file-input').on('change', function (e) {
     loadImage(
         e.target.files[0],
