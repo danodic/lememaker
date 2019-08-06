@@ -160,11 +160,11 @@ body {
 /* Slider https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 .slidecontainer {
   width: 200px;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: -10px;
-  transform-origin: left bottom;
+  transform-origin: left top;
   margin: 0;
 }
 
